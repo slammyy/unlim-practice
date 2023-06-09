@@ -1,0 +1,238 @@
+@font-face {
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:300;
+    src:local("Poppins Light"),
+        local("Poppins-Light"),
+        url("fonts/Poppins-Light.woff2") format("woff2")
+}
+@font-face {
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:400;
+    src:local("Poppins"),
+        local("Poppins-Regular"),
+        url("fonts/Poppins-Regular.woff2") format("woff2")
+}
+@font-face {
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:500;
+    src:local("Poppins Medium"),
+        local("Poppins-Medium"),
+        url("fonts/Poppins-Medium.woff2") format("woff2")
+}
+@font-face {
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:600;
+    src:local("Poppins SemiBold"),
+        local("Poppins-SemiBold"),
+        url("fonts/Poppins-SemiBold.woff2") format("woff2")
+}
+@font-face {
+    font-family:Poppins;
+    font-style:normal;
+    font-weight:700;
+    src:local("Poppins Bold"),
+        local("Poppins-Bold"),
+        url("fonts/Poppins-Bold.woff2") format("woff2")
+}
+* {
+    box-sizing:border-box!important;
+    transition:ease all .5s
+}
+html {
+    scroll-behavior:smooth
+}
+body {
+    color:#666;
+    font-size:14px;
+    font-family:Poppins;
+    line-height:1.80857;
+    font-weight:400;
+    overflow-x:hidden
+}
+a {
+    color:#1f1f1f;
+    text-decoration:none!important;
+    outline:0!important;
+    -webkit-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    -ms-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out
+}
+h1 {
+    letter-spacing:0;
+    font-weight:400;
+    position:relative;
+    padding:0 0 10px 0;
+    font-weight:400;
+    line-height:normal;
+    color:#111;
+    margin:0
+}
+h1 {
+    font-size:24px
+}
+*,
+::after,
+::before {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+button:focus {
+    outline:0
+}
+p {
+    margin:20px;
+    font-weight:300;
+    font-size:15px;
+    line-height:24px
+}
+a {
+    color:#222;
+    text-decoration:none;
+    outline:0!important
+}
+a {
+    text-decoration:none!important;
+    outline:0!important;
+    -webkit-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    -ms-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out
+}
+:focus {
+    outline:0
+}
+button {
+    border:0;
+    margin:0;
+    padding:0;
+    cursor:pointer
+}
+.layout_padding {
+    padding-top:90px;
+    padding-bottom:0
+}
+.footer_section {
+    width:100%;
+    float:left;
+    background-color:#00aeef;
+    height:auto;
+    padding-top:50px;
+    padding-bottom:50px;
+    margin-top:60px
+}
+.subscribr_text {
+    width:100%;
+    float:left;
+    font-size:30px;
+    color:#fff
+}
+.lorem_text {
+    width:100%;
+    float:left;
+    font-size:16px;
+    color:#fff;
+    margin-left:0
+}
+.email_bt_2 {
+    width:100%;
+    float:left;
+    font-size:16px;
+    color:#c3c2c2;
+    background-color:#fff;
+    text-align:left;
+    padding-left:15px;
+    height:60px;
+    border:0;
+    border-radius:20px;
+    padding-right:250px;
+    padding-top:16px
+}
+.subscribe_bt_2 {
+    width:20%;
+    background-color:#313233;
+    float:right;
+    padding:9px 14px;
+    color:#fff;
+    height:50px;
+    font-size:16px;
+    border-radius:20px;
+    top:-55px;
+    position:relative;
+    right:5px
+}
+.subscribe_bt_2 a {
+    color:#fff
+}
+.box_main_2 {
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    padding-top:30px!important;
+    display:flex
+}
+:root {
+    --input-padding-x:1.5rem;
+    --input-padding-y:.75rem
+}
+@supports (-ms-ime-align:auto) {
+}
+@media (min-width:992px) and (max-width:1199px) {
+    .lorem_text {
+        font-size:14px
+    }
+    .email_bt_2 {
+        font-size:14px;
+        padding-right:215px
+    }
+    .subscribe_bt_2 {
+        width:20%;
+        font-size:14px
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .lorem_text {
+        font-size:14px
+    }
+    .email_bt_2 {
+        font-size:14px;
+        padding-right:215px
+    }
+    .subscribe_bt_2 {
+        width:38%;
+        font-size:14px
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .lorem_text {
+        font-size:14px
+    }
+    .email_bt_2 {
+        font-size:14px;
+        padding-right:215px
+    }
+    .subscribe_bt_2 {
+        width:38%;
+        font-size:14px
+    }
+}
+@media (max-width:575px) {
+    .lorem_text {
+        font-size:14px
+    }
+    .email_bt_2 {
+        font-size:14px;
+        padding-right:140px
+    }
+    .subscribe_bt_2 {
+        width:45%;
+        font-size:14px
+    }
+}
