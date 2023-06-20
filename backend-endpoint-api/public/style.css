@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.id {
+    color: red;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+}
+
+table {
+    margin-top: 100px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    border: black solid 2px;
+}
