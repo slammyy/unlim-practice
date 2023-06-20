@@ -1,0 +1,3 @@
+[submodule "cosmozun_library"]
+	path = cosmozun_library
+	url = git@github.com:kspgithub/cosmozun_library.git
