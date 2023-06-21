@@ -24,6 +24,6 @@ app.use(express.json({ limit: '1mb' }));
 app.use(express.static('public'));
 
 app.post('/api', (req, res) => {
-    insertData(JSON.stringify(req.body).match(/:"(.*?)"/)[1]);
+    insertData(req.body.value.trim());
     res.end();
 });
