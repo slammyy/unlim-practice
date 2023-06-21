@@ -1,21 +1,20 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 
 const { Pool } = require('pg');
-require('dotenv');
 
 const insertData = async (data) => {
     const pool = new Pool({
-        user: "postgres",
-        host: "localhost",
-        database: "inputdata",
-        password: "password",
-        port: 5432,
+        user: process.env.PGUSER,
+        host: process.env.PGHOST,
+        database: process.env.PGDATABASE,
+        password: process.env.PGPASSWORD,
+        port: process.env.PGPORT,
     })
     await pool.connect();
     await pool.query(
-        `INSERT INTO entries (entry)
-VALUES ('${data}');`
+        `INSERT INTO content (text) VALUES ('${data}');`
     );
     await pool.end();
 };
