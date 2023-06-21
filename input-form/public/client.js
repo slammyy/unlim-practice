@@ -1,9 +1,9 @@
 let dataInput = document.querySelector('input');
+dataInput.focus();
 
 document.querySelector('form').addEventListener('submit', async (e) => {
-    value = dataInput.value;
     e.preventDefault();
-    console.log(value);
+    value = dataInput.value;
     data = { value };
     await fetch('/api', {
         method: 'POST',
@@ -12,4 +12,5 @@ document.querySelector('form').addEventListener('submit', async (e) => {
         },
         body: JSON.stringify(data)
     });
+    dataInput.value = '';
 });
