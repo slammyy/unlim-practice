@@ -1,0 +1,17 @@
+{
+  "name": "css-cleaner",
+  "version": "1.0.0",
+  "description": "Utility written in javascript to get rid of any unneccessary css like Bootstrap ant etc.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "css-tree": "^2.3.1",
+    "cssbeautify": "^0.3.1",
+    "glob": "^10.3.0",
+    "json-to-css": "^0.1.0"
+  }
+}
