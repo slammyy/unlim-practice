@@ -14,17 +14,24 @@ let css = fs.readFileSync('./style.css', { encoding: 'utf8', flag: 'r' });
 let cssObject = cssToObject(csstree.parse(css));
 
 // conpare style.css and bootstrap
+let hasBootstrap = false;
 for (let i = 0; i < Object.entries(cssObject).length; i++) {
     for (let j = 0; j < Object.entries(bootstrapObject).length; j++) {
         if (JSON.stringify(Object.entries(cssObject)[i]) == JSON.stringify(Object.entries(bootstrapObject)[j])) {
             const object = Object.entries(cssObject)[i][0];
             delete cssObject[object];
+            // mark bootstrap presents in file
+            hasBootstrap = true;
         }
     }
 }
 
-delete cssObject[":root"];
-delete cssObject["@tailwind"];
+// check file if tailwind presents in it
+let hasTailwind = false;
+if (css.match(/@tailwind/)) {
+    delete cssObject["@tailwind"];
+    hasTailwind = true;
+}
 
 // convert json to css and format it
 css = cssbeautify(Css.of(cssObject));
@@ -36,9 +43,20 @@ fs.writeFile('clear.css', css, (err) => {
 });
 
 const dependencies = {
-    bootstrap: 5.1
+    "css": {}
 };
 
+// add bootstrap to dependencies if it presents in file
+if (hasBootstrap) {
+    Object.assign(dependencies["css"], {"bootstrap": "css/bootstrap.css"});
+}
+
+// add tailwind to dependencies if it presents in file
+if (hasTailwind) {
+    Object.assign(dependencies["css"], {"tailwind": "css/tailwind"});
+}
+
+// write dependencies to dependencies.json and console.log it
 fs.writeFile('dependencies.json', JSON.stringify(dependencies, null, 4), (err) => {
     if (err) throw err;
     console.log('Dependencies has been saved to dependencies.');
