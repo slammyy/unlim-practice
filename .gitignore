@@ -3,5 +3,6 @@ __pycache__/
 .env
 node_modules/
 package-lock.json
-dependencies.json
-clear.css
+css-cleaner/dependencies.json
+css-cleaner/clear.css
+css-cleaner/style.css
