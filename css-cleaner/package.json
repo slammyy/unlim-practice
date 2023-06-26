@@ -1,7 +1,7 @@
 {
   "name": "css-cleaner",
   "version": "1.0.0",
-  "description": "Utility written in javascript to get rid of any unneccessary css like Bootstrap ant etc.",
+  "description": "Utility written in javascript to get rid of any unneccessary css like Bootstrap and etc.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
