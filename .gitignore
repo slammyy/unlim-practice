@@ -3,6 +3,10 @@ __pycache__/
 .env
 node_modules/
 package-lock.json
+<<<<<<< HEAD
 css-cleaner/dependencies.json
 css-cleaner/clear.css
 css-cleaner/style.css
+=======
+.expo/
+>>>>>>> 4b8d5ca (feat: add todo-mobile-app)
