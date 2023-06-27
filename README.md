@@ -45,6 +45,11 @@
 
 ---
 
-### [css-cleaner](https://github.com/slammyy/unlim-practice/tree/main/css-cleaner) ☒
+### [css-cleaner](https://github.com/slammyy/unlim-practice/tree/main/css-cleaner) ☑
 Написать обработчик который будет проходиться по файлу стилей и убирать 
 из него все лишнее (:root, Normalize, bootstrap и другие).
+
+---
+
+### [todo-mobile-app](https://github.com/slammyy/unlim-practice/tree/main/todo-mobile-app) ☑
+Мобильное приложение для составления списка дел.
