@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView, StatusBar } from 'react-native';
 import Task from './components/Task';
+import { AuthScreen } from './screens';
 
 export default function App() {
     const [task, setTask] = useState();
@@ -25,6 +26,7 @@ export default function App() {
         <View style={styles.container}>
             {/* Added this scroll view to enable scrolling when list gets longer than the page */}
             <StatusBar barStyle={'dark-content'}></StatusBar>
+            <AuthScreen />
             <ScrollView
                 contentContainerStyle={{
                     flexGrow: 1
