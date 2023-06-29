@@ -51,5 +51,10 @@
 
 ---
 
-### [todo-mobile-app](https://github.com/slammyy/unlim-practice/tree/main/todo-mobile-app) ☑
+### [todo-mobile-app](https://github.com/slammyy/unlim-practice/tree/main/todo-mobile-app)
 Мобильное приложение для составления списка дел.
+
+---
+
+### [task](https://github.com/slammyy/unlim-practice/tree/main/task)
+Мобильное приложение с различными услугами.
