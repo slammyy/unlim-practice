@@ -1,4 +1,10 @@
-import { StyleSheet, Text, View, Pressable } from 'react-native';
+import {
+    StyleSheet,
+    Text,
+    View,
+    Pressable,
+    Dimensions,
+} from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -29,7 +35,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 30,
         backgroundColor: '#007aff',
         borderRadius: '15%',
-        width: 350,
+        width: Dimensions.get('screen').width - 50,
         height: 100,
     },
     text: {
