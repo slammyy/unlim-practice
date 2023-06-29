@@ -22,7 +22,7 @@ const MainStack = () => {
                 options={{
                     headerRight: () => (
                         <MaterialIcons
-                            style={{ marginRight: 30 }}
+                            style={{ marginRight: 5 }}
                             name="account-circle"
                             size={30}
                             color="black"
