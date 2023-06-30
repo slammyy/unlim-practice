@@ -2,15 +2,23 @@ import {
     StyleSheet,
     Text,
     TextInput,
-    View,
     InputAccessoryView,
     SafeAreaView,
     Button,
     Pressable,
-    Keyboard
+    Keyboard,
+    Dimensions,
 } from 'react-native';
 
+import * as DocumentPicker from 'expo-document-picker';
+
 const Request = () => {
+    const pickDocument = async () => {
+        let result = await DocumentPicker.getDocumentAsync({});
+        console.log(result.uri);
+        console.log(result);
+    }
+
     return (
         <SafeAreaView style={styles.container}>
             <Text style={styles.p}>
@@ -31,6 +39,7 @@ const Request = () => {
             <Button
                 title='Прикрепить файл'
                 accessibilityLabel='Кнопка для отправки файла'
+                onPress={pickDocument}
             />
             <Pressable
                 style={({ pressed }) => [{
@@ -38,7 +47,7 @@ const Request = () => {
                 }, styles.button]}>
                 <Text style={styles.buttonText}>Новый запрос</Text>
             </Pressable>
-        </SafeAreaView>
+        </SafeAreaView >
     );
 }
 
@@ -57,7 +66,7 @@ const styles = StyleSheet.create({
     },
     input: {
         marginBottom: 20,
-        width: 350,
+        width: Dimensions.get('screen').width - 50,
         height: 120,
         borderRadius: 10,
         backgroundColor: 'white',
@@ -69,7 +78,7 @@ const styles = StyleSheet.create({
         width: 350,
         height: 50,
         borderRadius: 10,
-        backgroundColor: '#007aff',
+        backgroundColor: '#0961d9',
         alignItems: 'center',
         justifyContent: 'center',
     },
