@@ -3,7 +3,6 @@ import {
     Text,
     View,
     Pressable,
-    Dimensions,
 } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         gap: 4,
         width: 100,
-        height: 130,
+        height: 100,
     },
     frame: {
         padding: 10,
