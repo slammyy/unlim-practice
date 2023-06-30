@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Service from '../companents/Service';
 
 const Tasks = () => {
     return (
-        <ScrollView>
+        <View>
             <StatusBar />
             <View style={styles.container}>
                 <Service text="Трансферы AirBack" icon="plane" />
@@ -20,7 +20,7 @@ const Tasks = () => {
                 <Service text="Дэшборд" icon="pie-chart" />
                 <Service text="Маркетинг" icon="shopping-cart" />
             </View>
-        </ScrollView>
+        </View>
     );
 }
 
@@ -28,7 +28,10 @@ const styles = StyleSheet.create({
     container: {
         marginVertical: 30,
         alignItems: 'center',
-        gap: 30,
+        justifyContent: 'center',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        gap: 25,
     },
 });
 

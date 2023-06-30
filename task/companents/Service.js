@@ -18,31 +18,35 @@ const Service = (props) => {
             <View style={styles.frame}>
                 <FontAwesome
                     name={props.icon}
-                    size={50}
+                    size={30}
                     color="white"
                 />
-                <Text style={styles.text}>{props.text}</Text>
             </View>
+            <Text style={styles.text}>{props.text}</Text>
         </Pressable>
     );
 }
 
 const styles = StyleSheet.create({
-    frame: {
-        flexDirection: 'row',
+    container: {
         alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingHorizontal: 30,
+        gap: 4,
+        width: 100,
+        height: 130,
+    },
+    frame: {
+        padding: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: '#0961d9',
         borderRadius: '15%',
-        width: Dimensions.get('screen').width - 50,
-        height: 100,
+        width: 70,
+        height: 70,
     },
     text: {
-        fontSize: 20,
+        fontSize: 14,
         textAlign: 'center',
         fontWeight: 'bold',
-        color: 'white',
     }
 });
 
