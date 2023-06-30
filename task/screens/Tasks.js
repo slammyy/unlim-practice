@@ -11,6 +11,14 @@ const Tasks = () => {
                 <Service text="Бизнес залы" icon="suitcase" />
                 <Service text="Юрист" icon="legal" />
                 <Service text="Бухгалтер" icon="money" />
+                <Service text="Финансовые услуги" icon="credit-card" />
+                <Service text="Контакты клуба" icon="id-card-o" />
+                <Service text="Инвестиции" icon="bar-chart" />
+                <Service text="Эдвайзеры" icon="group" />
+                <Service text="Логистика" icon="truck" />
+                <Service text="Продажи" icon="line-chart" />
+                <Service text="Дэшборд" icon="pie-chart" />
+                <Service text="Маркетинг" icon="shopping-cart" />
             </View>
         </ScrollView>
     );
@@ -18,7 +26,7 @@ const Tasks = () => {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 30,
+        marginVertical: 30,
         alignItems: 'center',
         gap: 30,
     },
