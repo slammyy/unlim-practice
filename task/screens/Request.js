@@ -74,7 +74,7 @@ const Request = () => {
                 style={({ pressed }) => [{
                     opacity: pressed ? 0.5 : 1
                 }, styles.button]}>
-                <Text style={styles.buttonText}>Новый запрос</Text>
+                <Text style={styles.buttonText}>Отправить запрос</Text>
             </Pressable>
         </SafeAreaView >
     );
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     input: {
         marginBottom: 20,
         width: Dimensions.get('screen').width - 50,
-        height: 120,
+        height: 250,
         borderRadius: 10,
         backgroundColor: 'white',
         padding: 10,
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     button: {
         position: 'absolute',
         bottom: 60,
-        width: 350,
+        width: Dimensions.get('screen').width - 50,
         height: 50,
         borderRadius: 10,
         backgroundColor: '#0961d9',
