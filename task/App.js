@@ -8,6 +8,7 @@ import { Entypo } from '@expo/vector-icons';
 
 import Tasks from './screens/Tasks';
 import Request from './screens/Request';
+import Theme from './companents/Theme';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -36,7 +37,7 @@ const MainStack = () => {
 
 export default function App() {
     return (
-        <NavigationContainer>
+        <NavigationContainer theme={Theme}>
             <Tab.Navigator
                 screenOptions={{
                     tabBarStyle: {
