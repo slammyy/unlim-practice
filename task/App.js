@@ -52,6 +52,7 @@ export default function App() {
                         tabBarIcon: ({ color, size }) => (
                             <FontAwesome name="check-square" size={35} color={color} />
                         ),
+                        tabBarActiveTintColor: '#0762da',
                     }}
                 />
                 <Tab.Screen
@@ -61,6 +62,7 @@ export default function App() {
                         tabBarIcon: ({ color, size }) => (
                             <MaterialCommunityIcons name="newspaper-variant" size={35} color={color} />
                         ),
+                        tabBarActiveTintColor: '#0762da',
                     }}
                 />
                 <Tab.Screen
@@ -70,6 +72,7 @@ export default function App() {
                         tabBarIcon: ({ color, size }) => (
                             <Entypo name="chat" size={35} color={color} />
                         ),
+                        tabBarActiveTintColor: '#0762da',
                     }}
                 />
                 <Tab.Screen
@@ -79,6 +82,7 @@ export default function App() {
                         tabBarIcon: ({ color, size }) => (
                             <MaterialCommunityIcons name="sale" size={35} color={color} />
                         ),
+                        tabBarActiveTintColor: '#0762da',
                     }}
                 />
             </Tab.Navigator>

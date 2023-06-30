@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingHorizontal: 30,
-        backgroundColor: '#007aff',
+        backgroundColor: '#0961d9',
         borderRadius: '15%',
         width: Dimensions.get('screen').width - 50,
         height: 100,
