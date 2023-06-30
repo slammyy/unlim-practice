@@ -10,13 +10,40 @@ import {
     Dimensions,
 } from 'react-native';
 
+import React, { useState } from 'react';
+
 import * as DocumentPicker from 'expo-document-picker';
+import * as MailComposer from 'expo-mail-composer';
+
+let inputValue = "";
+let userAttachment = {};
 
 const Request = () => {
+    const [text, setText] = useState('Прикрепить файл');
+
     const pickDocument = async () => {
         let result = await DocumentPicker.getDocumentAsync({});
-        console.log(result.uri);
-        console.log(result);
+        userAttachment = await result.uri
+        setText('Поменять файл');
+    }
+
+    const sendEmail = () => {
+        if (MailComposer.isAvailableAsync) {
+            if (inputValue && userAttachment) {
+                MailComposer.composeAsync({
+                    recipients: 'maksimsavincev@gmail.com',
+                    subject: 'Вопрос клиента',
+                    body: inputValue,
+                    attachments: userAttachment
+                });
+            } else if (inputValue) {
+                MailComposer.composeAsync({
+                    recipients: 'maksimsavincev@gmail.com',
+                    subject: 'Вопрос клиента',
+                    body: inputValue,
+                });
+            }
+        }
     }
 
     return (
@@ -32,16 +59,18 @@ const Request = () => {
                 placeholder='Ваш вопрос *'
                 multiline
                 inputAccessoryViewID='inputID'
+                onChangeText={newValue => inputValue = newValue}
             />
             <InputAccessoryView nativeID='inputID'>
                 <Button onPress={Keyboard.dismiss} title="Скрыть клавиатуру" />
             </InputAccessoryView>
             <Button
-                title='Прикрепить файл'
+                title={text}
                 accessibilityLabel='Кнопка для отправки файла'
                 onPress={pickDocument}
             />
             <Pressable
+                onPress={sendEmail}
                 style={({ pressed }) => [{
                     opacity: pressed ? 0.5 : 1
                 }, styles.button]}>
