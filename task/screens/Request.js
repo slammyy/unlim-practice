@@ -16,7 +16,7 @@ import * as DocumentPicker from 'expo-document-picker';
 import * as MailComposer from 'expo-mail-composer';
 
 let inputValue = "";
-let userAttachment = {};
+let userAttachment = null;
 
 const Request = () => {
     const [text, setText] = useState('Прикрепить файл');
