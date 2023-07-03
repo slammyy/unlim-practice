@@ -7,19 +7,47 @@ const Tasks = () => {
         <ScrollView>
             <StatusBar />
             <View style={styles.container}>
-                <Service text="Дэшборд бизнеса" icon="pie-chart" />
-                <Service text="Продажи" icon="line-chart" />
-                <Service text="Маркетинг" icon="shopping-cart" />
-                <Service text="Бухгалтер" icon="money" />
-                <Service text="Юрист" icon="legal" />
-                <Service text="Логистика" icon="truck" />
-                <Service text="Финансовые услуги" icon="credit-card" />
-                <Service text="Контакты клуба" icon="id-card-o" />
-                <Service text="Инвестиции" icon="bar-chart" />
-                <Service text="Эдвайзеры" icon="group" />
-                <Service text="Бизнес мероприятия" icon="calendar" />
-                <Service text="Трансферы AirBack" icon="plane" />
-                <Service text="Бизнес залы" icon="suitcase" />
+                <Service 
+                    text="Дэшборд бизнеса" 
+                    icon="pie-chart" />
+                <Service 
+                    text="Продажи" 
+                    icon="line-chart" />
+                <Service 
+                    text="Маркетинг" 
+                    icon="shopping-cart" />
+                <Service 
+                    text="Бухгалтер" 
+                    icon="money" 
+                    window='Новый запрос'/>
+                <Service 
+                    text="Юрист" 
+                    icon="legal" />
+                <Service 
+                    text="Логистика" 
+                    icon="truck" />
+                <Service 
+                    text="Финансовые услуги" 
+                    icon="credit-card" />
+                <Service 
+                    text="Контакты клуба" 
+                    icon="id-card-o" 
+                    window='Контакты клуба' />
+                <Service 
+                    text="Инвестиции" 
+                    icon="bar-chart" />
+                <Service 
+                    text="Эдвайзеры" 
+                    icon="group" />
+                <Service 
+                    text="Бизнес мероприятия" 
+                    icon="calendar" />
+                <Service 
+                    text="Трансферы" 
+                    icon="plane" />
+                <Service 
+                    text="Бизнес залы" 
+                    icon="suitcase" />
             </View>
         </ScrollView>
     );

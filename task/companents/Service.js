@@ -12,7 +12,7 @@ const Service = (props) => {
     return (
         <Pressable
             style={styles.container}
-            onPress={() => navigation.navigate('Новый запрос')}
+            onPress={() => navigation.navigate(props.window)}
         >
             <View style={styles.frame}>
                 <FontAwesome
