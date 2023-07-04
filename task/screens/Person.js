@@ -8,7 +8,7 @@ const Person = ({ route }) => {
     return (
         <View style={styles.view}>
             <Text style={styles.name}>{route.params.name}</Text>
-            <Text style={styles.info}>Компания: Unlim practice</Text>
+            <Text style={styles.info}>Компания: Unlim group</Text>
             <Text style={styles.info}>Должность: руководитель</Text>
             <Text style={styles.info}>Отрасль: серверы</Text>
             <Text style={styles.info}>Выручка: 120000</Text>
