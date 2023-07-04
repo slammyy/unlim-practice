@@ -7,9 +7,6 @@ import {
 
 import { useNavigation } from '@react-navigation/native';
 
-import * as DocumentPicker from 'expo-document-picker';
-import * as MailComposer from 'expo-mail-composer';
-
 const Person = ({ route }) => {
     const navigation = useNavigation();
     return (

@@ -43,9 +43,13 @@ const Contacts = () => {
         }
     }
 
-    const contains = ({ name, email }, query) => {
+    const contains = ({ name, email, department, city }, query) => {
         const { first, last } = name;
-        if (first.includes(query) || last.includes(query) || email.includes(query)) {
+        if (first.includes(query) ||
+            last.includes(query) ||
+            email.includes(query) ||
+            department.includes(query) ||
+            city.includes(query)) {
             return true;
         } else {
             return false;
