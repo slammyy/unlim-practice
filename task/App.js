@@ -10,6 +10,7 @@ import Tasks from './screens/Tasks';
 import Request from './screens/Request';
 import Theme from './companents/Theme';
 import Contacts from './screens/Contacts';
+import Person from './screens/Person';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -19,6 +20,7 @@ const MainStack = () => {
         <Stack.Navigator initialRouteName="Задачи">
             <Stack.Screen name="Новый запрос" component={Request} />
             <Stack.Screen name="Контакты клуба" component={Contacts} />
+            <Stack.Screen name="Контакт" component={Person} />
             <Stack.Screen
                 name="Задачи"
                 component={Tasks}

@@ -8,14 +8,17 @@ import {
     FlatList,
     Image,
     Dimensions,
+    Pressable,
 } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
 import filter from 'lodash.filter';
 import { useState, useEffect } from 'react';
 
 const api = 'https://randomuser.me/api/?results=30';
 
 const Contacts = () => {
+    const navigation = useNavigation();
     const [isLoading, setIsLoading] = useState(false);
     const [data, setData] = useState([]);
     const [error, setError] = useState(null);
@@ -90,13 +93,19 @@ const Contacts = () => {
                 data={data}
                 keyExtractor={(item) => item.login.username}
                 renderItem={({ item }) => (
-                    <View style={styles.itemContainer}>
-                        <Image style={styles.itemImage} source={{ uri: item.picture.thumbnail }} />
-                        <View>
+                    <Pressable
+                        onPress={() => {
+                            navigation.navigate('Контакт', {
+                                name: item.name.first + ' ' + item.name.last,
+                            })
+                        }}
+                        style={styles.itemContainer}>
+                        <Image style={styles.itemImage} source={{ uri: item.picture.large }} />
+                        <View >
                             <Text style={styles.itemName}>{item.name.first} {item.name.last}</Text>
-                            <Text style={styles.itemCompany}>{item.email}</Text>
+                            <Text style={styles.itemCompany}>Unlim group</Text>
                         </View>
-                    </View>
+                    </Pressable>
                 )}
             />
         </SafeAreaView>
@@ -105,7 +114,9 @@ const Contacts = () => {
 
 const styles = StyleSheet.create({
     screen: {
-        marginVertical: 10,
+        marginTop: 10,
+        marginBottom: 35,
+
     },
     search: {
         width: Dimensions.get('screen').width - 50,
@@ -120,7 +131,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginTop: 10,
-        marginLeft: 40,
+        marginLeft: 20,
         gap: 10,
     },
     itemImage: {
