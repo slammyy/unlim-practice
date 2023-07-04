@@ -11,6 +11,7 @@ import Request from './screens/Request';
 import Theme from './companents/Theme';
 import Contacts from './screens/Contacts';
 import Person from './screens/Person';
+import ContactRequest from './screens/ContactRequest';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,7 @@ const MainStack = () => {
             <Stack.Screen name="Новый запрос" component={Request} />
             <Stack.Screen name="Контакты клуба" component={Contacts} />
             <Stack.Screen name="Контакт" component={Person} />
+            <Stack.Screen name="Запрос контакта" component={ContactRequest} />
             <Stack.Screen
                 name="Задачи"
                 component={Tasks}
