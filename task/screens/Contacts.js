@@ -34,11 +34,9 @@ const Contacts = () => {
             setData(json.results);
             setFullData(json.results);
             setIsLoading(false);
-            console.log(json.results);
         } catch (error) {
             setError(error);
             setIsLoading(false);
-            console.log(error);
         }
     }
 
