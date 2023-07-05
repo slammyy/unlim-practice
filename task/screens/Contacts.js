@@ -9,13 +9,14 @@ import {
     Image,
     Dimensions,
     Pressable,
+    RefreshControl,
 } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 import filter from 'lodash.filter';
 import { useState, useEffect } from 'react';
 
-const api = 'https://randomuser.me/api/?results=30';
+const api = 'https://random-data-api.com/api/v2/users?size=30';
 
 const Contacts = () => {
     const navigation = useNavigation();
@@ -24,18 +25,27 @@ const Contacts = () => {
     const [error, setError] = useState(null);
     const [fullData, setFullData] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
+    const [refreshing, setRefreshing] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
         fetchData(api);
     }, [])
 
+    const onRefresh = () => {
+        setRefreshing(true);
+        fetchData(api);
+        setTimeout(() => {
+            setRefreshing(false);
+        }, 2000);
+    };
+
     const fetchData = async (url) => {
         try {
             const response = await fetch(url);
             const json = await response.json();
-            setData(json.results);
-            setFullData(json.results);
+            setData(json);
+            setFullData(json);
             setIsLoading(false);
         } catch (error) {
             setError(error);
@@ -43,13 +53,13 @@ const Contacts = () => {
         }
     }
 
-    const contains = ({ name, email, department, city }, query) => {
-        const { first, last } = name;
-        if (first.includes(query) ||
-            last.includes(query) ||
-            email.includes(query) ||
-            department.includes(query) ||
-            city.includes(query)) {
+    const contains = ({ first_name, last_name, address, employment }, query) => {
+        const { city } = address;
+        const { title } = employment;
+        if (first_name.includes(query) ||
+            last_name.includes(query) ||
+            city.includes(query) ||
+            title.includes(query)) {
             return true;
         } else {
             return false;
@@ -58,9 +68,8 @@ const Contacts = () => {
 
     const handleSearch = (query) => {
         setSearchQuery(query);
-        const formattedQuery = query.toLowerCase();
         const filteredData = filter(fullData, (user) => {
-            return contains(user, formattedQuery);
+            return contains(user, query);
         });
         setData(filteredData);
     }
@@ -94,24 +103,32 @@ const Contacts = () => {
                 onChangeText={(query) => handleSearch(query)}
             />
             <FlatList
-                data={data}
-                keyExtractor={(item) => item.login.username}
-                renderItem={({ item }) => (
-                    <Pressable
-                        onPress={() => {
-                            navigation.navigate('Контакт', {
-                                name: item.name.first + ' ' + item.name.last,
-                            })
-                        }}
-                        style={styles.itemContainer}>
-                        <Image style={styles.itemImage} source={{ uri: item.picture.large }} />
-                        <View >
-                            <Text style={styles.itemName}>{item.name.first} {item.name.last}</Text>
-                            <Text style={styles.itemCompany}>Unlim group</Text>
-                        </View>
-                    </Pressable>
-                )}
-            />
+                refreshControl={
+                    <RefreshControl 
+                        refreshing={refreshing} 
+                        onRefresh={onRefresh}
+                    />
+                    }
+                        data={data}
+                        keyExtractor={(item) => item.uid}
+                        renderItem={({ item }) => (
+                            <Pressable
+                                onPress={() => {
+                                    navigation.navigate('Контакт', {
+                                        name: item.first_name + ' ' + item.last_name,
+                                        position: item.employment.title,
+                                        city: item.address.city
+                                    })
+                                }}
+                                style={styles.itemContainer}>
+                                <Image style={styles.itemImage} source={{ uri: item.avatar }} />
+                                <View >
+                                    <Text style={styles.itemName}>{item.first_name} {item.last_name}</Text>
+                                    <Text style={styles.itemCompany}>Unlim group</Text>
+                                </View>
+                            </Pressable>
+                        )}
+                    />
         </SafeAreaView>
     );
 };
