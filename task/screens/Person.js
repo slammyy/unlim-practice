@@ -13,16 +13,17 @@ const Person = ({ route }) => {
         <View style={styles.view}>
             <Text style={styles.name}>{route.params.name}</Text>
             <Text style={styles.info}>Компания: Unlim group</Text>
-            <Text style={styles.info}>Должность: руководитель</Text>
+            <Text style={styles.info}>Должность: {route.params.position}</Text>
             <Text style={styles.info}>Отрасль: серверы</Text>
             <Text style={styles.info}>Выручка: 120000</Text>
-            <Button 
+            <Text style={styles.info}>Город проживания: {route.params.city}</Text>
+            <Button
                 title='Зарпостить контакт'
-                        onPress={() => {
-                            navigation.navigate('Запрос контакта', {
-                                name: route.params.name
-                            })
-                        }}
+                onPress={() => {
+                    navigation.navigate('Запрос контакта', {
+                        name: route.params.name
+                    })
+                }}
             />
         </View>
     );
@@ -41,6 +42,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     info: {
+        textAlign: 'center',
         fontSize: 20,
         opacity: .8,
     }
