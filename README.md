@@ -11,7 +11,7 @@
 
 ---
 
-### [cosmozun_library](/cosmozun_library)
+### [cosmozun_library](https://github.com/kspgithub/cosmozun_library/tree/4a8575292153bec5e9addeb75f406bf2695eed60)
 Определить 30 самых частых блоков встречающихся на сайтах 
 в разных видах и собрать архив.
 
