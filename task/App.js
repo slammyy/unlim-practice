@@ -20,6 +20,17 @@ const MainStack = () => {
     return (
         <Stack.Navigator initialRouteName="Задачи">
             <Stack.Screen name="Новый запрос" component={Request} />
+            <Stack.Screen name="Дэшборд бизнеса" component={Request} />
+            <Stack.Screen name="Продажи" component={Request} />
+            <Stack.Screen name="Маркетинг" component={Request} />
+            <Stack.Screen name="Юрист" component={Request} />
+            <Stack.Screen name="Логистика" component={Request} />
+            <Stack.Screen name="Финансовые услуги" component={Request} />
+            <Stack.Screen name="Инвестиции" component={Request} />
+            <Stack.Screen name="Эдвайзеры" component={Request} />
+            <Stack.Screen name="Бизнес мероприятия" component={Request} />
+            <Stack.Screen name="Трансеры" component={Request} />
+            <Stack.Screen name="Бизнес залы" component={Request} />
             <Stack.Screen name="Контакты клуба" component={Contacts} />
             <Stack.Screen name="Контакт" component={Person} />
             <Stack.Screen name="Запрос контакта" component={ContactRequest} />

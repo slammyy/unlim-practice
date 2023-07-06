@@ -9,44 +9,55 @@ const Tasks = () => {
             <View style={styles.container}>
                 <Service 
                     text="Дэшборд бизнеса" 
+                    window="Дэшборд бизнеса" 
                     icon="pie-chart" />
                 <Service 
                     text="Продажи" 
+                    window="Продажи" 
                     icon="line-chart" />
                 <Service 
                     text="Маркетинг" 
+                    window="Маркетинг" 
                     icon="shopping-cart" />
                 <Service 
                     text="Бухгалтер" 
-                    icon="money" 
-                    window='Новый запрос'/>
+                    window='Новый запрос'
+                    icon="money"/>
                 <Service 
                     text="Юрист" 
+                    window="Юрист" 
                     icon="legal" />
                 <Service 
                     text="Логистика" 
+                    window="Логистика" 
                     icon="truck" />
                 <Service 
                     text="Финансовые услуги" 
+                    window="Финансовые услуги" 
                     icon="credit-card" />
                 <Service 
                     text="Контакты клуба" 
-                    icon="id-card-o" 
-                    window='Контакты клуба' />
+                    window='Контакты клуба'
+                    icon="id-card-o"/>
                 <Service 
                     text="Инвестиции" 
+                    window="Инвестиции" 
                     icon="bar-chart" />
                 <Service 
                     text="Эдвайзеры" 
+                    window="Эдвайзеры" 
                     icon="group" />
                 <Service 
                     text="Бизнес мероприятия" 
+                    window="Бизнес мероприятия" 
                     icon="calendar" />
                 <Service 
                     text="Трансферы" 
+                    window="Трансферы" 
                     icon="plane" />
                 <Service 
                     text="Бизнес залы" 
+                    window="Бизнес залы" 
                     icon="suitcase" />
             </View>
         </ScrollView>
