@@ -17,7 +17,6 @@
     "expo-mail-composer": "~12.1.1",
     "expo-status-bar": "~1.4.4",
     "lodash.filter": "^4.6.0",
-    "qs": "^6.11.2",
     "react": "18.2.0",
     "react-native": "0.71.8",
     "react-native-document-picker": "^9.0.1",
