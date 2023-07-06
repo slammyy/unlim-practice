@@ -2,7 +2,7 @@
 
 ---
 
-### [python-postgres-connect](https://github.com/slammyy/unlim-practice/tree/main/python-postgres-connect)
+### [python-postgres-connect](/python-postgres-connect)
 - Установить PostgreSQL и pgAdmin. Ознакомиться с интерфейсом 
 - Подключиться в базе к PostgreSQL на Python
 - Создать базу и таблицу через python или pgadmin (на свой выбор)
@@ -11,13 +11,13 @@
 
 ---
 
-### [cosmozun_library](https://github.com/kspgithub/cosmozun_library/tree/4a8575292153bec5e9addeb75f406bf2695eed60)
+### [cosmozun_library](/cosmozun_library)
 Определить 30 самых частых блоков встречающихся на сайтах 
 в разных видах и собрать архив.
 
 ---
 
-### [input-form](https://github.com/slammyy/unlim-practice/tree/main/inputForm)
+### [input-form](/input-form)
 На фронте на html странице добавить поле для ввода текста и кнопку сохранить.
 После ввода текста в поле для ввода и нажатии кнопки сохранить текст должен 
 сохраниться в базу данных postgresql 
@@ -25,7 +25,7 @@
 
 ---
 
-### [backend-endpoint-api](https://github.com/slammyy/unlim-practice/tree/main/backend-endpoint-api)
+### [backend-endpoint-api](/backend-endpoint-api)
 Ознакомиться с документацией по rest API, JSON, endpoint.
 Создать базу postgresql и таблицу с любыми данными .
 Создать на backend endpoint API для выдачи данных из таблицы.
@@ -33,7 +33,7 @@
 
 ---
 
-### [todo-list](https://github.com/slammyy/unlim-practice/tree/main/todo-list)
+### [todo-list](/todo-list)
 На фронте на html странице сделать todo лист в 1 задачу.
 Название задачи запрашивать из таблицы postgresql.
 Ознакомиться с официальной документацией по bootstrap.
@@ -45,16 +45,16 @@
 
 ---
 
-### [css-cleaner](https://github.com/slammyy/unlim-practice/tree/main/css-cleaner)
+### [css-cleaner](/css-cleaner)
 Написать обработчик который будет проходиться по файлу стилей и убирать 
 из него все лишнее (:root, Normalize, bootstrap и другие).
 
 ---
 
-### [todo-mobile-app](https://github.com/slammyy/unlim-practice/tree/main/todo-mobile-app)
+### [todo-mobile-app](/todo-mobile-app)
 Мобильное приложение для составления списка дел.
 
 ---
 
-### [task](https://github.com/slammyy/unlim-practice/tree/main/task)
+### [tasks-mobile-app](/tasks-mobile-app)
 Мобильное приложение с различными услугами.
