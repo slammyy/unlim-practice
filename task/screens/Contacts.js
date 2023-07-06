@@ -117,7 +117,8 @@ const Contacts = () => {
                                     navigation.navigate('Контакт', {
                                         name: item.first_name + ' ' + item.last_name,
                                         position: item.employment.title,
-                                        city: item.address.city
+                                        city: item.address.city,
+                                        avatar: item.avatar
                                     })
                                 }}
                                 style={styles.itemContainer}>
