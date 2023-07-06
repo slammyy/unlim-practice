@@ -1,16 +1,21 @@
 # How to install and run locally
 
-## Requirements
+### Requirements
 
 [Node.js LTS](https://nodejs.org) - to run program.
+
 [Git](https://git-scm.com/downloads) - to clone this repo.
+
 [Watchman](https://facebook.github.io/watchman/docs/install#buildinstall) (Only for Linux and macOS users).
 
-## Installation
+### Installation
 
 ``` bash
 # Clone repo
 git clone https://github.com/slammyy/unlim-practice.git 
+
+# Move to project directory
+cd unlim-practice
 
 # Move to tasks-mobile-app/ folder
 cd tasks-mobile-app
@@ -22,7 +27,7 @@ npm i
 npm i -g expo-cli
 ```
 
-## Run program
+### Run program
 ``` bash
 # Start expo
 npx expo start
